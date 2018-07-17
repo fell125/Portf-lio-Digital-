@@ -1,9 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Felipe Lima</title>
+	<meta charset="utf-8">
+	<title>Felipe Lima | Programador - Portfólio Digital</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+	<script type="text/javascript">
+		$(window).on('scroll', function(){
+			if ($(window).scrollTop()){
+				$('nav').addClass('black');
+			}
+			else{
+				$('nav').removeClass('black');
+			}
+		})
+	</script>
 </head>
 <body>
-hello world!
+	<div class="col-md-12">
+		<nav>
+			<div class="logo"><a href="#"> Felipe Lima</a></div>
+			<ul>
+				<li><a href="#">Trabalhos</a></li>
+				<li><a href="#">Quem sou?</a></li>				
+				<li><a href="#">Entre em contato</a></li>
+			</ul>
+		</nav>
+		<div class="cabecalho">
+		
+		</div>
+		<div class="trabalhos">
+			<center>TRABALHOS</center>
+		</div>
+		<div class="quemsou">
+			<div class="mascara">
+				<h2>QUEM SOU</h2>
+				<p>Nascido e criado em São Luís do Maranhão, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java, possuindo um bom conhecimento em HTML, CSS e banco de dados MySql.</p>
+			</div>
+		</div>
+		<div class="contato">
+			<form action="https://formspree.io/limamr.felipe@gmail.com" method="POST">
+			    <input type="text" name="name">
+			    <input type="email" name="_replyto">
+			    <input type="submit" value="Send">
+			</form>
+		</div>
+		 <div class="push"></div>
+	</div>
+	<footer class="footer">
+		<ul>
+			<li>©Felipe Lima</li>
+			<li>98 98256.8262</li>
+			<li>limamr.felipe@gmail.com</li>
+			<li>LinkedIn</li>
+			<li>GitHub</li>
+		</ul>
+	</footer>
 </body>
 </html>
