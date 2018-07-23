@@ -28,21 +28,60 @@
 			}
 		})
 	</script>
+
+	<script>
+		$(document).ready(function() {
+
+			$('.linkTopo').click(function() {
+				$('html, body').animate({
+				scrollTop: $('#topo').offset().top
+				}, 1000);
+			});
+
+			$('.linkTrabalhos').click(function() {
+				$('html, body').animate({
+				scrollTop: $('#trabalhos').offset().top
+				}, 1000);
+			});
+
+			$('.linkQuemsou').click(function() {
+				$('html, body').animate({
+				scrollTop: $('#quemsou').offset().top
+				}, 1000);
+			});
+
+			$('.linkContato').click(function() {
+				$('html, body').animate({
+				scrollTop: $('#contato').offset().top
+				}, 1000);
+			});
+
+		});
+	</script>
+
 </head>
 <body>
 	<div class="col-md-12">
-		<nav>
-			<div class="logo"><a href="#"> Felipe Lima</a></div>
+		<nav >
+			<div class="logo"><a class="linkTopo" href="#"> Felipe Lima</a></div>
 			<ul>
-				<li><a href="#">Trabalhos</a></li>
-				<li><a href="#">Quem sou?</a></li>				
-				<li><a href="#">Entre em contato</a></li>
+				<li><a class="linkTrabalhos" href="#">Trabalhos</a></li>
+				<li><a class="linkQuemsou" href="#">Quem sou?</a></li>				
+				<li><a class="linkContato" href="#">Entre em contato</a></li>
 			</ul>
 		</nav>
-		<div class="cabecalho">
+		<div class="cabecalho" id="topo">
 		
 		</div>
-		<div class="trabalhos">
+
+		<div id="bg">
+			<div class="box">
+				<img src="image/lume.png">	
+				<a href="#trabalhos" id="close">&times;</a>			
+			</div>			
+		</div>
+
+		<div class="trabalhos" id="trabalhos">
 			<div id="demo" class="carousel slide" data-ride="carousel">
 			  <ul class="carousel-indicators">
 			    <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -51,27 +90,34 @@
 			  </ul>
 			  <div class="carousel-inner">
 
-			    <div class="carousel-item active"  style="height: 500px; background-image: url(image/quemsou.jpg); background-position: center; background-size: cover;">
-			      <div class="mascara"></div>
-			      <div class="carousel-caption">
-			        <h3>Trabalhos</h3>
-			        <p>Site da Liga Universitária Maranhense de e-Sports.</p>
-			      </div>   
+
+			    <div class="carousel-item active"  style="height: 500px; background-image: url(image/trabalho1.png); background-position: top; background-size: cover;">
+			    	<a href="#bg">
+				      <div class="mascara" style="background-color: rgba(0,0,0,0.6);"></div>
+				      <div class="carousel-caption">
+				        <h3>Trabalhos</h3>
+				        <p>Site da Liga Universitária Maranhense de e-Sports.</p>
+				      </div> 
+			      	</a>  
 			    </div>
 
 			    <div class="carousel-item" style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
-			      <div class="mascara"></div>
-			      <div class="carousel-caption">
-			        <h3>Trabalhos</h3>
-			        <p>Site do ArraiáDaMira desenvolvido durante o estágio na TV Mirante.</p>
-			      </div>   
+			    	<a href="#">
+				      <div class="mascara" style="background-color: rgba(0,0,0,0.3);"></div>
+				      <div class="carousel-caption">
+				        <h3>Trabalhos</h3>
+				        <p>Site do ArraiáDaMira desenvolvido durante o estágio na TV Mirante.</p>
+				      </div> 
+				    </a>  
 			    </div>
 			    <div class="carousel-item"  style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
-			      <div class="mascara"></div>
-			      <div class="carousel-caption">
-			        <h3>Trabalhos</h3>
-			        <p>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</p>
-			      </div>   
+			    	<a href="#">
+				      <div class="mascara" style="background-color: rgba(0,0,0,0.3);"></div>
+				      <div class="carousel-caption">
+				        <h3>Trabalhos</h3>
+				        <p>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</p>
+				      </div>
+				    </a>   
 			    </div>
 			  </div>
 			  <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -82,13 +128,13 @@
 			  </a>
 			</div>
 		</div>
-		<div class="quemsou">
+		<div class="quemsou" id="quemsou">
 			<div class="mascara">
 				<h2>QUEM SOU</h2>
 				<p>Nascido e criado em São Luís do Maranhão, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java, possuindo um bom conhecimento em HTML, CSS e banco de dados MySql.</p>
 			</div>
 		</div>
-		<div class="contato">
+		<div class="contato" id="contato">
 			<div class="col-md-7 formulario">
 				<h1>ENTRE EM CONTATO</h1>
 				<h2><i class="fa fa-whatsapp"></i>  98 98256.8262</h2>
@@ -123,7 +169,9 @@
 			</div>
 		</div>
 		 <div class="push"></div>
+		 
 	</div>
+
 	<footer class="footer">
 		<ul>
 			<li>©Felipe Lima</li>
