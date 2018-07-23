@@ -3,10 +3,20 @@
 <head>
 	<meta charset="utf-8">
 	<title>Felipe Lima | Programador - Portfólio Digital</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 
 	<script type="text/javascript">
 		$(window).on('scroll', function(){
@@ -33,7 +43,44 @@
 		
 		</div>
 		<div class="trabalhos">
-			<center>TRABALHOS</center>
+			<div id="demo" class="carousel slide" data-ride="carousel">
+			  <ul class="carousel-indicators">
+			    <li data-target="#demo" data-slide-to="0" class="active"></li>
+			    <li data-target="#demo" data-slide-to="1"></li>
+			    <li data-target="#demo" data-slide-to="2"></li>
+			  </ul>
+			  <div class="carousel-inner">
+
+			    <div class="carousel-item active"  style="height: 500px; background-image: url(image/quemsou.jpg); background-position: center; background-size: cover;">
+			      <div class="mascara"></div>
+			      <div class="carousel-caption">
+			        <h3>Trabalhos</h3>
+			        <p>Site da Liga Universitária Maranhense de e-Sports.</p>
+			      </div>   
+			    </div>
+
+			    <div class="carousel-item" style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
+			      <div class="mascara"></div>
+			      <div class="carousel-caption">
+			        <h3>Trabalhos</h3>
+			        <p>Site do ArraiáDaMira desenvolvido durante o estágio na TV Mirante.</p>
+			      </div>   
+			    </div>
+			    <div class="carousel-item"  style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
+			      <div class="mascara"></div>
+			      <div class="carousel-caption">
+			        <h3>Trabalhos</h3>
+			        <p>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</p>
+			      </div>   
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+			    <span class="carousel-control-prev-icon"></span>
+			  </a>
+			  <a class="carousel-control-next" href="#demo" data-slide="next">
+			    <span class="carousel-control-next-icon"></span>
+			  </a>
+			</div>
 		</div>
 		<div class="quemsou">
 			<div class="mascara">
@@ -42,11 +89,38 @@
 			</div>
 		</div>
 		<div class="contato">
-			<form action="https://formspree.io/limamr.felipe@gmail.com" method="POST">
-			    <input type="text" name="name">
-			    <input type="email" name="_replyto">
-			    <input type="submit" value="Send">
-			</form>
+			<div class="col-md-7 formulario">
+				<h1>ENTRE EM CONTATO</h1>
+				<h2><i class="fa fa-whatsapp"></i>  98 98256.8262</h2>
+				<h2><i class="material-icons">email</i> limamr.felipe@gmail.com</h2>
+				<form method="POST" name="form_contato" action="func/enviar.php">
+				  <div class="form-group">	
+				 	<input type="text" class="form-control" name="nome" placeholder="Nome" required style="background-color: #111; color: white;">			   
+				    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required style="background-color: #111; color: white;">
+				    <input id="telefone" type="text" class="form-control" name="telefone" placeholder="Telefone" required maxlength="13" style="background-color: #111; color: white;">
+
+				    <script>
+				    	jQuery("input#telefone")
+				        .mask("(99) 9999-9999?9")
+				        .focusout(function (event) {  
+				            var target, phone, element;  
+				            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+				            phone = target.value.replace(/\D/g, '');
+				            element = $(target);  
+				            element.unmask();  
+				            if(phone.length > 10) {  
+				                element.mask("(99) 99999-999?9");  
+				            } else {  
+				                element.mask("(99) 9999-9999?9");  
+				            }  
+				        });
+				    </script>
+
+				    <textarea type="text" class="form-control" name="msg" placeholder="Mensagem" rows="5" required style="background-color: #111; color: white;"></textarea>
+				  </div>
+				  <button type="submit" class="btn btn-primary">Enviar</button>
+				</form>
+			</div>
 		</div>
 		 <div class="push"></div>
 	</div>
