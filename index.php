@@ -7,14 +7,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>  	
 
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<script src="assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="assets/js/script.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/prettyPhoto.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 
@@ -74,64 +77,60 @@
 		
 		</div>
 
-		<div id="bg">
-			<div class="box">
-				<img src="image/lume.png">	
-				<a href="#trabalhos" id="close">&times;</a>			
-			</div>			
-		</div>
-
 		<div class="trabalhos" id="trabalhos">
-			<div id="demo" class="carousel slide" data-ride="carousel">
-			  <ul class="carousel-indicators">
-			    <li data-target="#demo" data-slide-to="0" class="active"></li>
-			    <li data-target="#demo" data-slide-to="1"></li>
-			    <li data-target="#demo" data-slide-to="2"></li>
-			  </ul>
-			  <div class="carousel-inner">
-
-
-			    <div class="carousel-item active"  style="height: 500px; background-image: url(image/trabalho1.png); background-position: top; background-size: cover;">
-			    	<a href="#bg">
-				      <div class="mascara" style="background-color: rgba(0,0,0,0.6);"></div>
-				      <div class="carousel-caption">
-				        <h3>Trabalhos</h3>
-				        <p>Site da Liga Universitária Maranhense de e-Sports.</p>
-				      </div> 
-			      	</a>  
-			    </div>
-
-			    <div class="carousel-item" style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
-			    	<a href="#">
-				      <div class="mascara" style="background-color: rgba(0,0,0,0.3);"></div>
-				      <div class="carousel-caption">
-				        <h3>Trabalhos</h3>
-				        <p>Site do ArraiáDaMira desenvolvido durante o estágio na TV Mirante.</p>
-				      </div> 
-				    </a>  
-			    </div>
-			    <div class="carousel-item"  style="height: 500px; background-image: url(image/lume.png); background-position: center; background-size: cover;">
-			    	<a href="#">
-				      <div class="mascara" style="background-color: rgba(0,0,0,0.3);"></div>
-				      <div class="carousel-caption">
-				        <h3>Trabalhos</h3>
-				        <p>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</p>
-				      </div>
-				    </a>   
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-			    <span class="carousel-control-prev-icon"></span>
-			  </a>
-			  <a class="carousel-control-next" href="#demo" data-slide="next">
-			    <span class="carousel-control-next-icon"></span>
-			  </a>
+			<div class="content trabalhos-inside">
+				<h2>Trabalhos</h2>
+				<div class="row">
+					<div class="bloco-trabalho">
+						 <ul class="gallery clearfix">
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos" style="background-image: url(image/LUME.png);"></div></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+						</ul> 
+						<h3>Site da Liga Universitária Maranhense de e-Sports.</h3>
+					</div>
+					<div class="bloco-trabalho">
+						 <ul class="gallery clearfix">
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos"  style="background-image: url(image/arraia.png);"></div></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+						</ul> 
+						<h3>Site do ArraiáDaMira 2017 desenvolvido durante o estágio na TV Mirante.</h3>
+					</div>
+					<div class="bloco-trabalho">
+					 <ul class="gallery clearfix">
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos"  style="background-image: url(image/tj.jpg);"></div></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
+							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+						</ul> 
+						<h3>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</h3>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="quemsou" id="quemsou">
-			<div class="mascara">
+			<div class="content">
+				<?php 
+					
+				    $data = '21/06/1995';				   
+				    
+				    list($dia, $mes, $ano) = explode('/', $data);			   
+				    
+				    $hoje = mktime(0, 0, 0, date('m'), date('d'), date('Y'));
+				    
+				    $nascimento = mktime( 0, 0, 0, $mes, $dia, $ano);
+				  
+				    $idade = floor((((($hoje - $nascimento) / 60) / 60) / 24) / 365.25);
+				    
+				?>	
 				<h2>QUEM SOU</h2>
-				<p>Nascido e criado em São Luís do Maranhão, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java, possuindo um bom conhecimento em HTML, CSS e banco de dados MySql.</p>
+				<p>Nascido e criado em São Luís do Maranhão, <?php echo $idade; ?> anos, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java.</p>
 			</div>
 		</div>
 		<div class="contato" id="contato">
