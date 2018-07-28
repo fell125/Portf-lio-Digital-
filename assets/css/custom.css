@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Gaegu');
+@font-face {
+     font-family: stellar;
+     src: url('../fonts/Stellar-light.otf');
+}
+
+
+@font-face {
+     font-family: ailerons;
+     src: url('../fonts/Ailerons-Typeface.otf');
+}
 
 body{
 	padding: 0;
@@ -101,7 +110,7 @@ footer{
 footer ul{
 	list-style: none;
 	width: fit-content;
-	margin: 0 auto;
+	margin: 3px auto;
 	padding: 0;
 	display: flex;
 }
@@ -116,6 +125,12 @@ footer ul li{
 	padding: 12px 10px;
 	text-decoration: none;
 	transition: .3s;
+}
+
+.icones{
+	width: 30px;
+    margin-top: -15px;
+    border-radius: 5px;
 }
 
 .footer,.push {
@@ -140,8 +155,9 @@ footer ul li{
 }
 
 .quemsou h2{
-	font-family: 'Gaegu', cursive;
-    font-size: 80px;
+	font-family: ailerons;
+	font-weight: lighter;
+    font-size: 60px;
     text-align: center;
 	padding: 0;
     margin: 40px;
@@ -150,13 +166,21 @@ footer ul li{
 }
 
 .quemsou p{
-	font-family: 'Gaegu', cursive;
-    font-size: 3vw;
+	font-family: stellar;
+    font-size: 30px;
     text-align: justify;
-    padding: 0px 100px 50px;
+    padding: 60px 15%;
     margin: 40px;
     color: white;
     vertical-align: middle;
+}
+
+.perfil{
+	width: 10%;
+	margin: 0 45%;
+	border:5px solid black;
+    border-radius: 50%;
+    text-align: center;
 }
 
 .mascara{
@@ -169,7 +193,7 @@ footer ul li{
 .trabalhos{
 	height: 100%;
 	width: 100%;
-	background-color: #fff;
+	background-color: #f5f8fa;
 	border-top: 5px solid black;
 	border-bottom: 5px solid black;
 	display: table;
@@ -196,16 +220,16 @@ footer ul li{
 }
 
 .trabalhos h2{
-	font-family: 'Gaegu', cursive;
+	font-family: ailerons;
 	text-align: center;
 	font-size: 70px;
 	margin-bottom: 50px;
 }
 
 .trabalhos h3{
-	font-family: 'Gaegu', cursive;
+	font-family: stellar;
 	font-size: 25px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .carousel-inner img {
@@ -214,12 +238,23 @@ footer ul li{
 }
 
 .contato{
-	font-family: 'Gaegu', cursive;
-	height: auto;
+	font-family: stellar;
+	height: 100%;
+	width: 100%;
 	background-color: #111;
+	display: table;
+}
+
+.contato .content{
+	padding-top: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .contato h1{
+	font-family: ailerons;
 	color: white;
 	font-size: 50px;
 	margin-bottom: 50px;
@@ -308,6 +343,15 @@ div.pp_default .pp_nav .currentTextHolder{
 	height: 500px;
 }
 
+.mascara-trabalhos{
+	width: 100%; 
+	height: 100%; 
+	visibility: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
 @media screen and (max-width: 980px){
 	.bloco-trabalho{
 		width: 100%;
@@ -325,4 +369,14 @@ div.pp_default .pp_nav .currentTextHolder{
 	.trabalhos h2{
 		font-size: 100px;
 	}
+
+	.quemsou p{
+		font-size: 40px;
+	}
+
+	.perfil {
+	    width: 25%;
+	    margin: 0px 37%;
+	}
+
 }

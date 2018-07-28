@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,6 +64,15 @@
 		});
 	</script>
 
+	<script>
+	  function show(id) {
+	    document.getElementById(id).style.visibility = "visible";
+	  }
+	  function hide(id) {
+	    document.getElementById(id).style.visibility = "hidden";
+	  }  
+	</script>
+
 </head>
 <body>
 	<div class="col-md-12">
@@ -79,35 +90,61 @@
 
 		<div class="trabalhos" id="trabalhos">
 			<div class="content trabalhos-inside">
-				<h2>Trabalhos</h2>
+				<h2>TRABALHOS</h2>
 				<div class="row">
 					<div class="bloco-trabalho">
 						 <ul class="gallery clearfix">
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos" style="background-image: url(image/LUME.png);"></div></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+							<li>
+								<a href="image/lume1.png" rel="prettyPhoto[lume]">
+									<div class="trabalhos-fotos" id="divT1" onMouseOver="show('div1')" onMouseOut="hide('div1')"  style="background-image: url(image/LUME.png);">
+										<div id="div1" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/lumeDesfocado.png) no-repeat center; background-size: cover">
+											
+										</div>
+									</div>
+								</a>
+							</li>
+							<li><a href="image/lume2.png" rel="prettyPhoto[lume]"></a></li>
+							<li><a href="image/lume3.png" rel="prettyPhoto[lume]"></a></li>
+							<li><a href="image/lume4.png" rel="prettyPhoto[lume]"></a></li>
+							<li><a href="image/lume5.png" rel="prettyPhoto[lume]"></a></li>
+							<li><a href="image/lume6.png" rel="prettyPhoto[lume]"></a></li>	
+							<li><a href="image/lume7.png" rel="prettyPhoto[lume]"></a></li>		
 						</ul> 
-						<h3>Site da Liga Universitária Maranhense de e-Sports.</h3>
+						<h3>Site da Liga Universitária Maranhense de e-Sports (em desenvolvimento).</h3>
 					</div>
 					<div class="bloco-trabalho">
 						 <ul class="gallery clearfix">
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos"  style="background-image: url(image/arraia.png);"></div></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+							<li>
+								<a href="image/mirante1.png" rel="prettyPhoto[mirante]">
+									<div class="trabalhos-fotos" onMouseOver="show('div2')" onMouseOut="hide('div2')"  style="background-image: url(image/arraia.png);">
+										<div id="div2" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/arraiaDesfocado.png) no-repeat center; background-size: cover">
+											
+										</div>
+									</div>
+								</a>
+							</li>
+							<li><a href="image/mirante2.png" rel="prettyPhoto[mirante]"></a></li>
+							<li><a href="image/mirante3.png" rel="prettyPhoto[mirante]"></a></li>
+							<li><a href="image/mirante4.png" rel="prettyPhoto[mirante]"></a></li>
+							<li><a href="image/mirante5.png" rel="prettyPhoto[mirante]"></a></li>		
+							<li><a href="image/mirante6.png" rel="prettyPhoto[mirante]"></a></li>		
 						</ul> 
 						<h3>Site do ArraiáDaMira 2017 desenvolvido durante o estágio na TV Mirante.</h3>
 					</div>
 					<div class="bloco-trabalho">
 					 <ul class="gallery clearfix">
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"><div class="trabalhos-fotos"  style="background-image: url(image/tj.jpg);"></div></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>
-							<li><a href="image/trabalho1.png" rel="prettyPhoto[gallery]"></a></li>		
+							<li>
+								<a href="image/tj1.png" rel="prettyPhoto[tj]">
+									<div class="trabalhos-fotos" onMouseOver="show('div3')" onMouseOut="hide('div3')"  style="background-image: url(image/tj.jpg);">
+										<div id="div3" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/tjDesfocado.png) no-repeat center; background-size: cover">
+											
+										</div>
+									</div>
+								</a>
+							</li>
+							<li><a href="image/tj2.png" rel="prettyPhoto[tj]"></a></li>
+							<li><a href="image/tj3.png" rel="prettyPhoto[tj]"></a></li>
+							<li><a href="image/tj4.png" rel="prettyPhoto[tj]"></a></li>	
 						</ul> 
 						<h3>Sistema de apoio ao suporte do processo Judicial Eletrônico (PJe) desenvolvido durante o estágio no TJ-MA.</h3>
 					</div>
@@ -130,41 +167,57 @@
 				    
 				?>	
 				<h2>QUEM SOU</h2>
+
+				<img class="perfil" src="image/perfil.png">
 				<p>Nascido e criado em São Luís do Maranhão, <?php echo $idade; ?> anos, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java.</p>
 			</div>
 		</div>
 		<div class="contato" id="contato">
-			<div class="col-md-7 formulario">
-				<h1>ENTRE EM CONTATO</h1>
-				<h2><i class="fa fa-whatsapp"></i>  98 98256.8262</h2>
-				<h2><i class="material-icons">email</i> limamr.felipe@gmail.com</h2>
-				<form method="POST" name="form_contato" action="func/enviar.php">
-				  <div class="form-group">	
-				 	<input type="text" class="form-control" name="nome" placeholder="Nome" required style="background-color: #111; color: white;">			   
-				    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required style="background-color: #111; color: white;">
-				    <input id="telefone" type="text" class="form-control" name="telefone" placeholder="Telefone" required maxlength="13" style="background-color: #111; color: white;">
+			<div class="content">
+				<div class="col-md-7 formulario">
+					<h1>ENTRE EM CONTATO</h1>
+					<h2><i class="fa fa-whatsapp"></i>  98 98256.8262</h2>
+					<h2><i class="material-icons">email</i> contato@limafelipe.com.br</h2>
+					<?php 
 
-				    <script>
-				    	jQuery("input#telefone")
-				        .mask("(99) 9999-9999?9")
-				        .focusout(function (event) {  
-				            var target, phone, element;  
-				            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
-				            phone = target.value.replace(/\D/g, '');
-				            element = $(target);  
-				            element.unmask();  
-				            if(phone.length > 10) {  
-				                element.mask("(99) 99999-999?9");  
-				            } else {  
-				                element.mask("(99) 9999-9999?9");  
-				            }  
-				        });
-				    </script>
+						$verifica = $_SESSION['valor'];
 
-				    <textarea type="text" class="form-control" name="msg" placeholder="Mensagem" rows="5" required style="background-color: #111; color: white;"></textarea>
-				  </div>
-				  <button type="submit" class="btn btn-primary">Enviar</button>
-				</form>
+						if($verifica == 2){
+							echo '';
+						}else{
+							echo $_SESSION['msg'];
+						}	
+
+						$_SESSION['valor'] = 2;
+					?>
+					<form method="POST" name="form_contato" action="func/enviar.php">
+					  <div class="form-group">	
+					 	<input type="text" class="form-control" name="nome" placeholder="Nome" required style="background-color: #111; color: white;">			   
+					    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email" required style="background-color: #111; color: white;">
+					    <input id="telefone" type="text" class="form-control" name="telefone" placeholder="Telefone" required maxlength="13" style="background-color: #111; color: white;">
+
+					    <script>
+					    	jQuery("input#telefone")
+					        .mask("(99) 9999-9999?9")
+					        .focusout(function (event) {  
+					            var target, phone, element;  
+					            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+					            phone = target.value.replace(/\D/g, '');
+					            element = $(target);  
+					            element.unmask();  
+					            if(phone.length > 10) {  
+					                element.mask("(99) 99999-999?9");  
+					            } else {  
+					                element.mask("(99) 9999-9999?9");  
+					            }  
+					        });
+					    </script>
+
+					    <textarea type="text" class="form-control" name="msg" placeholder="Mensagem" rows="5" required style="background-color: #111; color: white;"></textarea>
+					  </div>
+					  <button type="submit" class="btn btn-primary">Enviar</button>
+					</form>
+				</div>
 			</div>
 		</div>
 		 <div class="push"></div>
@@ -175,9 +228,9 @@
 		<ul>
 			<li>©Felipe Lima</li>
 			<li>98 98256.8262</li>
-			<li>limamr.felipe@gmail.com</li>
-			<li>LinkedIn</li>
-			<li>GitHub</li>
+			<li>contato@limafelipe.com.br</li>
+			<li><a href="https://www.linkedin.com/in/felipe-lima-19aba214b/" target="_blank"><img class="icones" src="image/linkedin.png"></a></li>
+			<li><a href="https://github.com/limamr-felipe" target="_blank"><img class="icones" src="image/git.jpg"></a></li>
 		</ul>
 	</footer>
 </body>
