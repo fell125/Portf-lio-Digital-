@@ -28,7 +28,7 @@ html,body{
 }
 
 .cabecalho{
-	background-image: url(../../image/image3.jpg);
+	background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.5)),url(../../image/wall.jpg) no-repeat fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -36,7 +36,7 @@ html,body{
 	width: 100%;
 }
 
-nav{
+.nav-principal{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -47,14 +47,14 @@ nav{
 	transition: .3s;
 }
 
-nav.black{
+.nav-principal.black{
 	background:rgba(0,0,0,0.8);
 	height: 100px;
 	z-index: 5;
 	padding: 10px 100px;
 }
 
-nav .logo{
+.nav-principal .logo{
 	padding: 22px 20px;
 	height: 80px;
 	float: left;
@@ -62,16 +62,16 @@ nav .logo{
 	transition: .3s;
 }
 
-nav .logo a{
+.nav-principal .logo a{
 	color: white;
 	text-decoration: none;
 }
 
-nav.black .logo{
+.nav-principal.black .logo{
 	color: #fff;
 }
 
-nav ul{
+.nav-principal ul{
 	list-style: none;
 	float: right;
 	margin: 0;
@@ -79,11 +79,11 @@ nav ul{
 	display: flex;
 }
 
-nav ul li{
+.nav-principal ul li{
 	list-style: none;
 }
 
-.col-md-12 nav ul li a{
+.col-md-12 .nav-principal ul li a{
 	line-height: 80px;
 	color: white;
 	padding: 12px 30px;
@@ -92,8 +92,12 @@ nav ul li{
 	transition: .3s;
 }
 
-nav.black ul li a{
+.nav-principal.black ul li a{
 	color: #fff;
+}
+
+.nav-responsive{
+	display: none;
 }
 
 footer{
@@ -336,6 +340,11 @@ div.pp_default .pp_nav .currentTextHolder{
 	width: 33.33%;
 }
 
+.bloco-trabalho h3{
+	text-align: justify;
+	padding-right: 12px;
+}
+
 .trabalhos-fotos{
 	background-position: center;
 	background-size: cover;
@@ -346,28 +355,121 @@ div.pp_default .pp_nav .currentTextHolder{
 .mascara-trabalhos{
 	width: 100%; 
 	height: 100%; 
-	visibility: hidden;
+	opacity: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	transition: .7s;
 }
 
-@media screen and (max-width: 980px){
+.mascara-trabalhos:hover{
+	opacity: 1;
+}
+
+#check{
+	display: none;
+}
+
+#icone{
+	cursor: pointer;
+	padding: 15px;
+	position: fixed;
+	z-index: 1;
+}
+
+#icone i{
+	font-size: 50px; 
+	color: white;
+}
+
+.barra{
+	background-color: #333;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	transition: all .2s linear;
+	left: -100%;
+	top: 75px;
+}
+
+.barra nav{
+	width: 100%;
+	position: absolute;
+}
+
+.barra nav a{
+	text-decoration: none;
+}
+
+.link{
+	background-color: #494950;
+	padding: 20px;
+	font-family: 'Arial';
+	font-size: 13pt;
+	transition: all .2s linear;
+	color: white;
+}
+
+.link input{
+	display: none;
+}
+
+.barra nav a label{
+	width: 100%;
+}
+
+.link:hover{
+	background-color: #050542;
+}
+
+#check:checked ~ .barra{
+	transform: translateX(100%);
+}
+
+#link:target ~ .barra{
+	transform: translateY(-100%);
+}
+
+.menu-celular{
+	width: 100%;
+    height: 75px;
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 5;
+    display: none;
+}
+
+.menu-celular .logo{
+	margin-top: 18px;
+}
+
+.menu-celular .logo a{
+	 text-decoration:none;
+	 color: white;
+	 font-size: 30px;
+}
+
+.btn-primary:focus{
+	background-color: #111;
+}
+
+@media screen and (max-width: 1200px){
+	.trabalhos-fotos{
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 992px){
 	.bloco-trabalho{
-		width: 100%;
 		font-size: 50px;
 	}
 	.bloco-trabalho h3{
-		font-size: 44px;
+		font-size: 24px;
 		margin-bottom: 50px;
 	}
 
 	.trabalhos-fotos{
 		height: 300px;
-	}
-
-	.trabalhos h2{
-		font-size: 100px;
 	}
 
 	.quemsou p{
@@ -379,4 +481,140 @@ div.pp_default .pp_nav .currentTextHolder{
 	    margin: 0px 37%;
 	}
 
+
+}
+
+@media screen and (max-width: 890px){
+	.logo{
+		width: 100%;
+		text-align: center;
+	}
+	.nav-principal.black{
+		height: 140px;
+	}
+
+	.nav-principal {
+		display: none;
+	}
+
+	.menu-celular{
+		display: block;
+	}
+
+	.col-md-12 .nav-principal ul li a{
+		padding: 12px 0;
+		line-height: 0px;
+	}
+
+	.quemsou p{
+		margin: 0;
+	}
+
+	footer{
+		padding: 10px 0px;
+	}
+
+	.trabalhos-inside{
+		padding: 0;
+	}
+
+	.row{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.bloco-trabalho h3{
+		margin-right: 10px;
+		font-size: 20px;
+	}
+	.trabalhos h2 {
+    	font-size: 84px;
+    }
+}
+
+@media screen and (max-width: 768px){
+	.bloco-trabalho{
+		width: 100%;		
+	}
+	.bloco-trabalho h3{
+		font-size: 24px;
+	}
+
+	.formulario{
+		margin:0 auto;
+	}
+
+	#fullResImage{
+		height: auto !important;
+		width: 100% !important; 
+	}
+
+	div.pp_pic_holder{
+		width: 100% !important;
+		left: 0 !important;
+	}
+
+	div.pp_content{
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	div.pp_details{
+		width: 100% !important;
+		margin-top: 25px !important; 
+	}
+
+	p.currentTexHolder{
+		color: white;
+	}
+
+	.pp_hoverContainer{
+		width: 93% !important;
+		height: 100% !important;
+	}
+}
+
+@media (max-width: 768px) and (orientation: landscape){
+	div.pp_pic_holder{
+		top: 0 !important;
+		margin-top: -25px;
+		position: fixed;
+	}
+
+	div.pp_details{
+		margin-top: -35px !important;
+	}
+
+}
+
+@media screen and (max-width: 504px){
+	.footer-none{
+		display: none;
+	}
+
+	.bloco-trabalho h3 {
+	    font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 438px){
+	.trabalhos h2 {
+    	font-size: 50px;
+	}
+
+	.quemsou p {
+	    font-size: 23px;
+	}
+
+	.quemsou h2{
+		font-size: 40px;
+	}
+
+	.contato h1 {
+		font-size: 30px;
+	}
+
+	.contato h2 {
+	    font-size: 20px;
+	}
 }

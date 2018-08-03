@@ -4,6 +4,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
 	<title>Felipe Lima | Programador - Portfólio Digital</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -26,10 +27,10 @@
 	<script type="text/javascript">
 		$(window).on('scroll', function(){
 			if ($(window).scrollTop()){
-				$('nav').addClass('black');
+				$('.nav-principal').addClass('black');
 			}
 			else{
-				$('nav').removeClass('black');
+				$('.nav-principal').removeClass('black');
 			}
 		})
 	</script>
@@ -64,28 +65,31 @@
 		});
 	</script>
 
-	<script>
-	  function show(id) {
-	    document.getElementById(id).style.visibility = "visible";
-	  }
-	  function hide(id) {
-	    document.getElementById(id).style.visibility = "hidden";
-	  }  
-	</script>
-
 </head>
 <body>
 	<div class="col-md-12">
-		<nav >
-			<div class="logo"><a class="linkTopo" href="#"> Felipe Lima</a></div>
-			<ul>
-				<li><a class="linkTrabalhos" href="#">Trabalhos</a></li>
-				<li><a class="linkQuemsou" href="#">Quem sou?</a></li>				
-				<li><a class="linkContato" href="#">Entre em contato</a></li>
-			</ul>
-		</nav>
+			<nav class="nav-principal" >
+				<div class="logo"><a class="linkTopo" href="#"> Felipe Lima</a></div>
+				<ul>
+					<li><a class="linkTrabalhos" href="#">Trabalhos</a></li>
+					<li><a class="linkQuemsou" href="#">Quem sou?</a></li>				
+					<li><a class="linkContato" href="#">Entre em contato</a></li>
+				</ul>
+			</nav>
+		<div class="menu-celular">
+			<input type="checkbox" id="check">
+			<label id="icone" for="check"><i class="material-icons">menu</i></label>
+			<div class="logo"><a class="linkTopo" href="#">Felipe Lima</a></div> 
+			<div class="barra">
+				<nav>
+					<a class="linkTrabalhos" href="#"><label for="check"><div class="link"><input type="checkbox" id="link">Trabalhos</div></label></a>
+					<a class="linkQuemsou" href="#"><label for="check"><div class="link"><input type="checkbox" id="link">Quem sou</div></label></a>
+					<a class="linkContato" href="#"><label for="check"><div class="link"><input type="checkbox" id="link">Contato</div></label></a>
+				</nav>
+			</div>
+		</div>
 		<div class="cabecalho" id="topo">
-		
+			
 		</div>
 
 		<div class="trabalhos" id="trabalhos">
@@ -96,7 +100,7 @@
 						 <ul class="gallery clearfix">
 							<li>
 								<a href="image/lume1.png" rel="prettyPhoto[lume]">
-									<div class="trabalhos-fotos" id="divT1" onMouseOver="show('div1')" onMouseOut="hide('div1')"  style="background-image: url(image/LUME.png);">
+									<div class="trabalhos-fotos" id="divT1" style="background-image: url(image/LUME.png);">
 										<div id="div1" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/lumeDesfocado.png) no-repeat center; background-size: cover">
 											
 										</div>
@@ -116,7 +120,7 @@
 						 <ul class="gallery clearfix">
 							<li>
 								<a href="image/mirante1.png" rel="prettyPhoto[mirante]">
-									<div class="trabalhos-fotos" onMouseOver="show('div2')" onMouseOut="hide('div2')"  style="background-image: url(image/arraia.png);">
+									<div class="trabalhos-fotos" style="background-image: url(image/arraia.png);">
 										<div id="div2" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/arraiaDesfocado.png) no-repeat center; background-size: cover">
 											
 										</div>
@@ -135,7 +139,7 @@
 					 <ul class="gallery clearfix">
 							<li>
 								<a href="image/tj1.png" rel="prettyPhoto[tj]">
-									<div class="trabalhos-fotos" onMouseOver="show('div3')" onMouseOut="hide('div3')"  style="background-image: url(image/tj.jpg);">
+									<div class="trabalhos-fotos" style="background-image: url(image/tj.jpg);">
 										<div id="div3" class="mascara-trabalhos" style="background: url(image/lupa.png) no-repeat center,url(image/tjDesfocado.png) no-repeat center; background-size: cover">
 											
 										</div>
@@ -169,7 +173,7 @@
 				<h2>QUEM SOU</h2>
 
 				<img class="perfil" src="image/perfil.png">
-				<p>Nascido e criado em São Luís do Maranhão, <?php echo $idade; ?> anos, bacharel em Ciência da Computação e desenvolvedor com foco nas linguagens PHP e Java.</p>
+				<p>Felipe Ribeiro Mafra Lima, nascido e criado em São Luís do Maranhão, <?php echo $idade; ?> anos, bacharel em Ciência da Computação e desenvolvedor fron-end e back-end.</p>
 			</div>
 		</div>
 		<div class="contato" id="contato">
@@ -227,9 +231,9 @@
 	<footer class="footer">
 		<ul>
 			<li>©Felipe Lima</li>
-			<li>98 98256.8262</li>
-			<li>contato@limafelipe.com.br</li>
-			<li><a href="https://www.linkedin.com/in/felipe-lima-19aba214b/" target="_blank"><img class="icones" src="image/linkedin.png"></a></li>
+			<li class="footer-none">98 98256.8262</li>
+			<li class="footer-none">contato@limafelipe.com.br</li>
+			<li><a href="https://www.linkedin.com/in/limamr-felipe/" target="_blank"><img class="icones" src="image/linkedin.png"></a></li>
 			<li><a href="https://github.com/limamr-felipe" target="_blank"><img class="icones" src="image/git.jpg"></a></li>
 		</ul>
 	</footer>
